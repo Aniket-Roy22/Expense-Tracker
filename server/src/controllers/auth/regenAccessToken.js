@@ -1,4 +1,4 @@
-import {generateAccessToken} from "../utils/generateToken.js";
+import {generateAccessToken} from "../../utils/generateToken.js";
 
 export function regenAccessToken(req, res)
 {

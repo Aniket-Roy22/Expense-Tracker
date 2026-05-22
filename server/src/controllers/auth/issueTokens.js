@@ -1,7 +1,7 @@
 import {
 	generateAccessToken,
 	generateRefreshToken,
-} from "../utils/generateToken.js";
+} from "../../utils/generateToken.js";
 
 export function issueTokens(req, res)
 {
