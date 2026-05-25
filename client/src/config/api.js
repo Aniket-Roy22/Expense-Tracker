@@ -5,6 +5,7 @@ const api = axios.create({
 	withCredentials: true,
 });
 
+// REQUEST INTERCEPTOR
 api.interceptors.request.use(
 	(config) => {
 		const accessToken = localStorage.getItem("accessToken");
@@ -19,32 +20,33 @@ api.interceptors.request.use(
 	(error) => Promise.reject(error),
 );
 
+// RESPONSE INTERCEPTOR
 api.interceptors.response.use(
 	(response) => response,
 	async (error) => {
 		const originalRequest = error.config;
 
-		if (error.response?.status === 403 && !originalRequest._retry)
-		{
+		if (
+			error.response?.status === 403 &&
+			!originalRequest._retry &&
+			originalRequest.url !== "/auth/token"
+		) {
 			originalRequest._retry = true;
 
-			try
-			{
-				const response = await axios.post(
-					"http://localhost:3000/api/auth/token",
+			try {
+				const res = await axios.post(
+					"http://localhost:3000/auth/token",
 					{},
 					{
 						withCredentials: true,
 					},
 				);
 
-				const newAccessToken = response.data.data.accessToken;
+				const newAccessToken = res.data.accessToken;
 				localStorage.setItem("accessToken", newAccessToken);
 				originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
 				return api(originalRequest);
-			}
-			catch (refreshError)
-			{
+			} catch (refreshError) {
 				localStorage.removeItem("accessToken");
 				window.location.href = "/login";
 				return Promise.reject(refreshError);
