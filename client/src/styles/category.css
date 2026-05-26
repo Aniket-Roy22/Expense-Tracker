@@ -1,7 +1,55 @@
 .category-page
 {
-	padding: 2rem;
+	padding: 3rem;
 	color: white;
+}
+
+.category-buttons-single-page
+{
+	display: flex;
+	justify-content: right;
+	gap: 1rem;
+}
+
+.category-buttons-single-page > button
+{
+	padding: 0.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: var(--text);
+	fill: var(--background);
+
+	&:hover
+	{
+		background-color: var(--accent);
+
+		& svg
+		{
+			fill: var(--background);
+		}
+	}
+}
+
+.category-header-info
+{
+	color: var(--text);
+	margin-bottom: 2rem;
+	
+	& h1
+	{
+		font-size: 4rem;
+		padding: 0;
+		margin: 0 0 1rem;
+	}
+
+	& p
+	{
+		font-size: 1.5rem;
+	}
 }
 
 .expense-list

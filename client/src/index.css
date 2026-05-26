@@ -1,7 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+	--background: #eaefef;
+	--details: #bfc9d1;
+	--text: #25343f;
+	--accent: #ff9b51;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	background-color: black;
+	background-color: var(--background);
+	background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 }
 
 #root {
@@ -14,4 +24,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
+
+	font-family: "Nunito", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }

@@ -1,16 +1,27 @@
 .category-card
 {
-	background-color: #1e293b;
-	padding: 1rem;
+	background-color: var(--text);
+	padding: 1rem 1rem 1rem 2rem;
 	border-radius: 12px;
 	cursor: pointer;
-	color: white;
+	color: var(--background);
+}
+
+.category-card > h2
+{
+	font-size: xx-large;
+}
+
+.category-card > p
+{
+	font-size: large;
 }
 
 .progress-bar
 {
+	flex: 1;
 	height: 10px;
-	background-color: #334155;
+	background-color: var(--background);
 	border-radius: 999px;
 	margin-top: 1rem;
 	overflow: hidden;
@@ -19,25 +30,55 @@
 .progress-fill
 {
 	height: 100%;
-	background-color: #3b82f6;
+	border-radius: 999px;
+	background-color: var(--accent);
 }
 
 .category-buttons
 {
 	display: flex;
 	gap: 1rem;
-
 	margin-top: 1rem;
 }
 
-.category-buttons button
+.category-buttons:not(.single-page) button
 {
-	flex: 1;
-
-	padding: 0.7rem;
-
+	padding: 0.3rem 0.4rem;
 	border: none;
-	border-radius: 8px;
-
+	border-radius: 50%;
 	cursor: pointer;
+
+	&:hover
+	{
+		background-color: var(--accent);
+
+		& svg
+		{
+			fill: var(--background);
+		}
+	}
+}
+
+.modal
+{
+	background-color: var(--text);
+}
+
+.modal > h2
+{
+	font-size: xx-large;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.modal-buttons
+{
+	margin-top: 1rem;
+}
+
+.modal-buttons > button
+{
+	padding: 0.5rem;
+	font-size: medium;
+	font-style: normal;
 }
