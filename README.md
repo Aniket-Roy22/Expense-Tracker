@@ -203,6 +203,8 @@ New access token issued
 
 # API Endpoints
 
+Postman: [API Documentation](https://documenter.getpostman.com/view/39120321/2sBXwnsBXY)
+
 # Authentication Routes
 
 | Method | Endpoint         | Description          |
