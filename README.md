@@ -27,9 +27,6 @@ A modern full-stack expense tracking dashboard built using React, Express.js, Pr
 	- [Context API](#context-api)
 	- [Axios Interceptors](#axios-interceptors)
 	- [Protected Routes](#protected-routes)
-	- [Reusable Components](#reusable-components)
-- [Dashboard Workflow](#dashboard-workflow)
-- [Security Features](#security-features)
 - [Installation Guide](#installation-guide)
 	- [1. Clone Repository](#1-clone-repository)
 	- [2. Backend Setup](#2-backend-setup)
@@ -269,44 +266,12 @@ Protected routes prevent unauthorized access to dashboard pages.
 
 ---
 
-# Reusable Components
-
-Frontend is divided into reusable components:
-
-- Navbar
-- CategoryCard
-- ExpenseItem
-- ProtectedRoute
-
----
-
-# Dashboard Workflow
-
-```text
-Dashboard Page
-    ↓
-Displays all categories
-    ↓
-Each category shows:
-- limit
-- utilized amount
-- remaining balance
-    ↓
-Click category
-    ↓
-Open single category page
-    ↓
-Manage expenses inside category
-```
-
----
-
 # Installation Guide
 
 # 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/expense-tracker-dashboard.git
+git clone https://github.com/Aniket-Roy22/Expense-Tracker.git
 ```
 
 ---
